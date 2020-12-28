@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
+
+:root{
+    // --primary-color: #041E42;
+    --primary-color: #CB202D;
+    // --primary-color: #33373D;
+    --secondary-color: #EFB51E;
+    --white: #FFF;
+    --mat-1-black: #242424;
+    --mat-2-black: #121212;
+    --black: #000;
+    --border-color: #dee2e6;
+    --font-Dosa: 'Dosis', sans-serif;
+    --font-Pontano: 'Pontano Sans', sans-serif;
+    --font-Gothic: 'Gothic A1', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+// Foodmagic Mobile Navbar
+.foodmagic_navbar{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 17px;
+
+    .brand_logo{
+        img{
+            width: 150px;
+        }
+    }
+
+    .navbar_menu_list{
+        list-style: none;
+        display: none;
+    }
+
+    .mobile_right_menu_option{
+        svg{
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+// Advertisements
+.advertisement{
+    position: relative;
+    .banner_ads{
+        display: flex;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        padding: 5px 5px 5px 0;
+        .banner_item{
+            padding: 0 5px 0px 0px;
+            img{
+                width: 400px;
+                object-fit: cover;
+                min-height: 150px;
+                margin-left: 0;
+                padding-left: 0;
+                transition: transform 500ms;
+                border-radius: 12px;
+                border: 1px solid #dee2e6;
+                scroll-snap-align: start;
+            }
+        }
+    }
+    .banner_ads::-webkit-scrollbar {
+        display: none;
+    }
+
+    // Controls sliders
+    .slide_controls{
+        position: absolute;
+        top: 40%;
+        width: 100%;
+        .control_btns{
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .control_btn{
+                button{
+                    display: grid;
+                    justify-content: center;
+                    text-align: center;
+                    align-items: center;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 100%;
+                    border: none;
+                    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+                    cursor: pointer;
+                    
+                    svg{
+                        color: var(--mat-1-black);
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+                
+                button:hover{
+                    transition: all 2s linear;
+                }
+                button:focus{
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 990px){
+    .advertisement{
+        .slide_controls{
+            display: none;
+        }
+    }
+}
+
+// restaurant_card
+
+.restaurant_card{
+    border-radius: 20px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    .restaurant_card_header{
+        .restaurant_cover_img{
+            position: relative;
+            img{
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                width: 100%;
+                object-fit: cover;
+            }
+            .foodmagic_pro{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                padding: 5px 10px;
+                img.foodmagic_pro_logo_img{
+                    width: 80px;
+                    border-radius: 0;
+                }
+            }
+        }
+        .restaurant_details{
+            padding: 10px 15px;
+            .cuisines{
+                font-size: 12px;
+                margin-bottom: 0px;
+            }
+            .name{
+                font-size: 18px;
+                font-weight: 500;
+                color: var(--primary-color);
+                margin-bottom: 5px;
+            }
+            .rating{
+                font-size: 15px;
+                margin-bottom: 5px;
+                .rating_start_fill{
+                    color: #EFB51E;
+                }
+            }
+            .address{
+                font-size: 14px;
+                color: gray;
+            }
+        }
+    }
+    .restaurant_card_body{
+        padding: 5px 15px;
+        .restaurant_extra_info{
+            font-size: 12px;
+            .record{
+                display: flex;
+                p.title{
+                    min-width: 30%;
+                    color: gray;
+                    margin-bottom: 10px;
+                }
+                p.value{
+                    color: #33373D;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    .restaurant_card_footer{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        border-top: 1px solid var(--border-color);
+        a.restaurant_card_action_btn{
+            padding: 15px;
+            width: 100%;
+            align-items: center;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            font-size: 0.8rem;
+            text-decoration: none;
+            cursor: pointer;
+            .icon{
+                color: var(--mat-1-black);
+                margin-right: 10px;
+            }
+            .text{
+                color: var(--mat-1-black);
+            }
+        }
+        a.restaurant_card_action_btn:first-child{
+            border-right: 1px solid var(--border-color);
+        }
+    }
+}

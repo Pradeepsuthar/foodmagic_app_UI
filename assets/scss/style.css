@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap");
+:root {
+  --primary-color: #CB202D;
+  --secondary-color: #EFB51E;
+  --white: #FFF;
+  --mat-1-black: #242424;
+  --mat-2-black: #121212;
+  --black: #000;
+  --border-color: #dee2e6;
+  --font-Dosa: 'Dosis', sans-serif;
+  --font-Pontano: 'Pontano Sans', sans-serif;
+  --font-Gothic: 'Gothic A1', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.foodmagic_navbar {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 17px;
+}
+
+.foodmagic_navbar .brand_logo img {
+  width: 150px;
+}
+
+.foodmagic_navbar .navbar_menu_list {
+  list-style: none;
+  display: none;
+}
+
+.foodmagic_navbar .mobile_right_menu_option svg {
+  width: 20px;
+  height: 20px;
+}
+
+.advertisement {
+  position: relative;
+}
+
+.advertisement .banner_ads {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  padding: 5px 5px 5px 0;
+}
+
+.advertisement .banner_ads .banner_item {
+  padding: 0 5px 0px 0px;
+}
+
+.advertisement .banner_ads .banner_item img {
+  width: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-height: 150px;
+  margin-left: 0;
+  padding-left: 0;
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+  border-radius: 12px;
+  border: 1px solid #dee2e6;
+  scroll-snap-align: start;
+}
+
+.advertisement .banner_ads::-webkit-scrollbar {
+  display: none;
+}
+
+.advertisement .slide_controls {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+}
+
+.advertisement .slide_controls .control_btns {
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.advertisement .slide_controls .control_btns .control_btn button {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: none;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.advertisement .slide_controls .control_btns .control_btn button svg {
+  color: var(--mat-1-black);
+  width: 20px;
+  height: 20px;
+}
+
+.advertisement .slide_controls .control_btns .control_btn button:hover {
+  -webkit-transition: all 2s linear;
+  transition: all 2s linear;
+}
+
+.advertisement .slide_controls .control_btns .control_btn button:focus {
+  outline: none;
+}
+
+@media (max-width: 990px) {
+  .advertisement .slide_controls {
+    display: none;
+  }
+}
+
+.restaurant_card {
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.restaurant_card .restaurant_card_header .restaurant_cover_img {
+  position: relative;
+}
+
+.restaurant_card .restaurant_card_header .restaurant_cover_img img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.restaurant_card .restaurant_card_header .restaurant_cover_img .foodmagic_pro {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 5px 10px;
+}
+
+.restaurant_card .restaurant_card_header .restaurant_cover_img .foodmagic_pro img.foodmagic_pro_logo_img {
+  width: 80px;
+  border-radius: 0;
+}
+
+.restaurant_card .restaurant_card_header .restaurant_details {
+  padding: 10px 15px;
+}
+
+.restaurant_card .restaurant_card_header .restaurant_details .cuisines {
+  font-size: 12px;
+  margin-bottom: 0px;
+}
+
+.restaurant_card .restaurant_card_header .restaurant_details .name {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+.restaurant_card .restaurant_card_header .restaurant_details .rating {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.restaurant_card .restaurant_card_header .restaurant_details .rating .rating_start_fill {
+  color: #EFB51E;
+}
+
+.restaurant_card .restaurant_card_header .restaurant_details .address {
+  font-size: 14px;
+  color: gray;
+}
+
+.restaurant_card .restaurant_card_body {
+  padding: 5px 15px;
+}
+
+.restaurant_card .restaurant_card_body .restaurant_extra_info {
+  font-size: 12px;
+}
+
+.restaurant_card .restaurant_card_body .restaurant_extra_info .record {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.restaurant_card .restaurant_card_body .restaurant_extra_info .record p.title {
+  min-width: 30%;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.restaurant_card .restaurant_card_body .restaurant_extra_info .record p.value {
+  color: #33373D;
+  margin-bottom: 10px;
+}
+
+.restaurant_card .restaurant_card_footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+}
+
+.restaurant_card .restaurant_card_footer a.restaurant_card_action_btn {
+  padding: 15px;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 0.8rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.restaurant_card .restaurant_card_footer a.restaurant_card_action_btn .icon {
+  color: var(--mat-1-black);
+  margin-right: 10px;
+}
+
+.restaurant_card .restaurant_card_footer a.restaurant_card_action_btn .text {
+  color: var(--mat-1-black);
+}
+
+.restaurant_card .restaurant_card_footer a.restaurant_card_action_btn:first-child {
+  border-right: 1px solid var(--border-color);
+}
+/*# sourceMappingURL=style.css.map */
